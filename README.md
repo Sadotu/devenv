@@ -130,7 +130,7 @@ Not Installed:       95 tools
 ## 🎨 Features
 
 - **Multi-Environment Detection**: Automatically detects Windows, WSL, Git Bash, MSYS2
-- **300+ Tools**: Scans for hundreds of common development tools
+- **700+ Tools**: Scans for hundreds of common development tools
 - **Smart Version Detection**: Automatically extracts version numbers
 - **Multiple Output Formats**: Console, JSON, CSV
 - **Cross-Platform**: Works on Windows, Linux, macOS, WSL
@@ -205,4 +205,5 @@ Inspired by the comprehensive TODO document for creating a development environme
 ---
 
 Made with 💚 for developers who want clarity in their development environment
+
 
