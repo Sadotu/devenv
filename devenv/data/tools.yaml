@@ -1,9 +1,119 @@
 # Development Tools Database
-# Comprehensive list of tools to scan for
+# Comprehensive list of 300+ tools to scan for across all development environments
 
+# ============================================================================
+# 1. PROGRAMMING LANGUAGES & RUNTIMES
+# ============================================================================
+languages:
+  - name: Python
+    commands: [python, python3]
+    version_flags: [--version]
+  - name: Python 2
+    commands: [python2]
+    version_flags: [--version]
+  - name: Node.js
+    commands: [node, nodejs]
+    version_flags: [--version]
+  - name: Java
+    commands: [java]
+    version_flags: [--version]
+  - name: Java Compiler
+    commands: [javac]
+    version_flags: [--version]
+  - name: .NET
+    commands: [dotnet]
+    version_flags: [--version]
+  - name: Go
+    commands: [go, golang]
+    version_flags: [version]
+  - name: Ruby
+    commands: [ruby]
+    version_flags: [--version]
+  - name: Ruby IRB
+    commands: [irb]
+    version_flags: [--version]
+  - name: PHP
+    commands: [php]
+    version_flags: [--version]
+  - name: Rust
+    commands: [rustc]
+    version_flags: [--version]
+  - name: Rust Cargo
+    commands: [cargo]
+    version_flags: [--version]
+  - name: Perl
+    commands: [perl]
+    version_flags: [--version]
+  - name: Lua
+    commands: [lua]
+    version_flags: [-v]
+  - name: R
+    commands: [R]
+    version_flags: [--version]
+  - name: Rscript
+    commands: [Rscript]
+    version_flags: [--version]
+  - name: Swift
+    commands: [swift]
+    version_flags: [--version]
+  - name: Kotlin
+    commands: [kotlin, kotlinc]
+    version_flags: [-version]
+  - name: Scala
+    commands: [scala, scalac]
+    version_flags: [-version]
+  - name: Groovy
+    commands: [groovy]
+    version_flags: [--version]
+  - name: Elixir
+    commands: [elixir, iex]
+    version_flags: [--version]
+  - name: Erlang
+    commands: [erlang, erl]
+    version_flags: [--version]
+  - name: Haskell
+    commands: [ghc]
+    version_flags: [--version]
+  - name: OCaml
+    commands: [ocaml]
+    version_flags: [--version]
+  - name: Clojure
+    commands: [clojure, clj]
+    version_flags: [--version]
+  - name: Dart
+    commands: [dart]
+    version_flags: [--version]
+  - name: Julia
+    commands: [julia]
+    version_flags: [--version]
+  - name: Nim
+    commands: [nim]
+    version_flags: [--version]
+  - name: Zig
+    commands: [zig]
+    version_flags: [version]
+  - name: Crystal
+    commands: [crystal]
+    version_flags: [--version]
+  - name: V
+    commands: [v]
+    version_flags: [--version]
+  - name: Deno
+    commands: [deno]
+    version_flags: [--version]
+  - name: Bun
+    commands: [bun]
+    version_flags: [--version]
+
+# ============================================================================
+# 2. PACKAGE MANAGERS
+# ============================================================================
 package_managers:
   - name: npm
     commands: [npm]
+    version_flags: [--version]
+  - name: npx
+    commands: [npx]
     version_flags: [--version]
   - name: pip
     commands: [pip, pip3]
@@ -14,26 +124,71 @@ package_managers:
   - name: pnpm
     commands: [pnpm]
     version_flags: [--version]
-  - name: cargo
-    commands: [cargo]
-    version_flags: [--version]
   - name: gem
     commands: [gem]
+    version_flags: [--version]
+  - name: bundler
+    commands: [bundler, bundle]
+    version_flags: [--version]
+  - name: cargo
+    commands: [cargo]
     version_flags: [--version]
   - name: composer
     commands: [composer]
     version_flags: [--version]
-  - name: brew
+  - name: maven
+    commands: [maven, mvn]
+    version_flags: [--version]
+  - name: gradle
+    commands: [gradle]
+    version_flags: [--version]
+  - name: mix
+    commands: [mix]
+    version_flags: [--version]
+  - name: cabal
+    commands: [cabal]
+    version_flags: [--version]
+  - name: stack
+    commands: [stack]
+    version_flags: [--version]
+  - name: nuget
+    commands: [nuget]
+    version_flags: [help]
+  - name: chocolatey
+    commands: [choco, chocolatey]
+    version_flags: [--version]
+  - name: homebrew
     commands: [brew]
     version_flags: [--version]
   - name: apt
-    commands: [apt]
+    commands: [apt, apt-get]
     version_flags: [--version]
   - name: yum
     commands: [yum]
     version_flags: [--version]
-  - name: choco
-    commands: [choco]
+  - name: dnf
+    commands: [dnf]
+    version_flags: [--version]
+  - name: pacman
+    commands: [pacman]
+    version_flags: [--version]
+  - name: zypper
+    commands: [zypper]
+    version_flags: [--version]
+  - name: pkg
+    commands: [pkg]
+    version_flags: [--version]
+  - name: port
+    commands: [port]
+    version_flags: [version]
+  - name: nix
+    commands: [nix]
+    version_flags: [--version]
+  - name: snap
+    commands: [snap]
+    version_flags: [--version]
+  - name: flatpak
+    commands: [flatpak]
     version_flags: [--version]
   - name: winget
     commands: [winget]
@@ -44,60 +199,25 @@ package_managers:
   - name: poetry
     commands: [poetry]
     version_flags: [--version]
+  - name: pipenv
+    commands: [pipenv]
+    version_flags: [--version]
   - name: conda
     commands: [conda]
     version_flags: [--version]
-
-languages:
-  - name: Python
-    commands: [python, python3]
+  - name: pdm
+    commands: [pdm]
     version_flags: [--version]
-  - name: Node.js
-    commands: [node, nodejs]
+  - name: rye
+    commands: [rye]
     version_flags: [--version]
-  - name: Java
-    commands: [java]
-    version_flags: [--version]
-  - name: .NET
-    commands: [dotnet]
-    version_flags: [--version]
-  - name: Go
-    commands: [go]
-    version_flags: [version]
-  - name: Ruby
-    commands: [ruby]
-    version_flags: [--version]
-  - name: PHP
-    commands: [php]
-    version_flags: [--version]
-  - name: Rust
-    commands: [rustc]
-    version_flags: [--version]
-  - name: Perl
-    commands: [perl]
-    version_flags: [--version]
-  - name: Lua
-    commands: [lua]
-    version_flags: [-v]
-  - name: R
-    commands: [R, Rscript]
-    version_flags: [--version]
-  - name: Swift
-    commands: [swift]
-    version_flags: [--version]
-  - name: Kotlin
-    commands: [kotlin]
-    version_flags: [-version]
-  - name: Scala
-    commands: [scala]
-    version_flags: [-version]
-  - name: Deno
-    commands: [deno]
-    version_flags: [--version]
-  - name: Bun
-    commands: [bun]
+  - name: uv
+    commands: [uv]
     version_flags: [--version]
 
+# ============================================================================
+# 3. VERSION CONTROL SYSTEMS
+# ============================================================================
 version_control:
   - name: Git
     commands: [git]
@@ -108,7 +228,217 @@ version_control:
   - name: Mercurial
     commands: [hg]
     version_flags: [--version]
+  - name: Fossil
+    commands: [fossil]
+    version_flags: [version]
+  - name: Bazaar
+    commands: [bzr]
+    version_flags: [--version]
+  - name: CVS
+    commands: [cvs]
+    version_flags: [--version]
+  - name: Darcs
+    commands: [darcs]
+    version_flags: [--version]
+  - name: Perforce
+    commands: [p4]
+    version_flags: [--version]
 
+# ============================================================================
+# 4. BUILD TOOLS & COMPILERS
+# ============================================================================
+build_tools:
+  - name: Make
+    commands: [make]
+    version_flags: [--version]
+  - name: CMake
+    commands: [cmake]
+    version_flags: [--version]
+  - name: Ninja
+    commands: [ninja]
+    version_flags: [--version]
+  - name: Bazel
+    commands: [bazel]
+    version_flags: [--version]
+  - name: Buck
+    commands: [buck]
+    version_flags: [--version]
+  - name: Meson
+    commands: [meson]
+    version_flags: [--version]
+  - name: Autoconf
+    commands: [autoconf]
+    version_flags: [--version]
+  - name: GCC
+    commands: [gcc]
+    version_flags: [--version]
+  - name: G++
+    commands: [g++]
+    version_flags: [--version]
+  - name: Clang
+    commands: [clang]
+    version_flags: [--version]
+  - name: Clang++
+    commands: [clang++]
+    version_flags: [--version]
+  - name: MSVC
+    commands: [cl]
+    version_flags: []
+  - name: MinGW
+    commands: [mingw32-make, mingw]
+    version_flags: [--version]
+  - name: Tup
+    commands: [tup]
+    version_flags: [--version]
+  - name: SCons
+    commands: [scons]
+    version_flags: [--version]
+  - name: Waf
+    commands: [waf]
+    version_flags: [--version]
+  - name: Ant
+    commands: [ant]
+    version_flags: [--version]
+  - name: Grunt
+    commands: [grunt]
+    version_flags: [--version]
+  - name: Gulp
+    commands: [gulp]
+    version_flags: [--version]
+  - name: Webpack
+    commands: [webpack]
+    version_flags: [--version]
+  - name: Rollup
+    commands: [rollup]
+    version_flags: [--version]
+  - name: Parcel
+    commands: [parcel]
+    version_flags: [--version]
+  - name: Vite
+    commands: [vite]
+    version_flags: [--version]
+  - name: esbuild
+    commands: [esbuild]
+    version_flags: [--version]
+  - name: Turbo
+    commands: [turbo, turborepo]
+    version_flags: [--version]
+  - name: Nx
+    commands: [nx]
+    version_flags: [--version]
+  - name: Lerna
+    commands: [lerna]
+    version_flags: [--version]
+  - name: Rush
+    commands: [rush]
+    version_flags: [--version]
+
+# ============================================================================
+# 5. TESTING FRAMEWORKS & TOOLS
+# ============================================================================
+testing:
+  - name: Jest
+    commands: [jest]
+    version_flags: [--version]
+  - name: Mocha
+    commands: [mocha]
+    version_flags: [--version]
+  - name: pytest
+    commands: [pytest]
+    version_flags: [--version]
+  - name: JUnit
+    commands: [junit]
+    version_flags: [--version]
+  - name: TestNG
+    commands: [testng]
+    version_flags: [--version]
+  - name: RSpec
+    commands: [rspec]
+    version_flags: [--version]
+  - name: Minitest
+    commands: [minitest]
+    version_flags: [--version]
+  - name: Cargo Test
+    commands: [cargo-test]
+    version_flags: [--version]
+  - name: GoogleTest
+    commands: [gtest]
+    version_flags: [--version]
+  - name: Catch2
+    commands: [catch2]
+    version_flags: [--version]
+  - name: Doctest
+    commands: [doctest]
+    version_flags: [--version]
+  - name: unittest
+    commands: [unittest]
+    version_flags: [--version]
+  - name: PHPUnit
+    commands: [phpunit]
+    version_flags: [--version]
+  - name: NUnit
+    commands: [nunit]
+    version_flags: [--version]
+  - name: xUnit
+    commands: [xunit]
+    version_flags: [--version]
+  - name: Jasmine
+    commands: [jasmine]
+    version_flags: [--version]
+  - name: Karma
+    commands: [karma]
+    version_flags: [--version]
+  - name: Cypress
+    commands: [cypress]
+    version_flags: [--version]
+  - name: Playwright
+    commands: [playwright]
+    version_flags: [--version]
+  - name: Selenium
+    commands: [selenium]
+    version_flags: [--version]
+  - name: Puppeteer
+    commands: [puppeteer]
+    version_flags: [--version]
+
+# ============================================================================
+# 6. DEBUGGING & PROFILING
+# ============================================================================
+debugging:
+  - name: GDB
+    commands: [gdb]
+    version_flags: [--version]
+  - name: LLDB
+    commands: [lldb]
+    version_flags: [--version]
+  - name: Valgrind
+    commands: [valgrind]
+    version_flags: [--version]
+  - name: perf
+    commands: [perf]
+    version_flags: [--version]
+  - name: strace
+    commands: [strace]
+    version_flags: [--version]
+  - name: ltrace
+    commands: [ltrace]
+    version_flags: [--version]
+  - name: dtrace
+    commands: [dtrace]
+    version_flags: [--version]
+  - name: pprof
+    commands: [pprof]
+    version_flags: [--version]
+  - name: VTune
+    commands: [vtune]
+    version_flags: [--version]
+  - name: FlameGraph
+    commands: [flamegraph]
+    version_flags: [--version]
+
+# ============================================================================
+# 7. CONTAINER & ORCHESTRATION
+# ============================================================================
 containers:
   - name: Docker
     commands: [docker]
@@ -119,59 +449,364 @@ containers:
   - name: Podman
     commands: [podman]
     version_flags: [--version]
+  - name: Buildah
+    commands: [buildah]
+    version_flags: [--version]
+  - name: Skopeo
+    commands: [skopeo]
+    version_flags: [--version]
   - name: Kubectl
     commands: [kubectl]
+    version_flags: [version]
+  - name: K9s
+    commands: [k9s]
     version_flags: [version]
   - name: Helm
     commands: [helm]
     version_flags: [version]
+  - name: Kustomize
+    commands: [kustomize]
+    version_flags: [version]
   - name: Minikube
     commands: [minikube]
     version_flags: [version]
+  - name: kind
+    commands: [kind]
+    version_flags: [--version]
+  - name: k3s
+    commands: [k3s]
+    version_flags: [--version]
+  - name: k3d
+    commands: [k3d]
+    version_flags: [--version]
+  - name: MicroK8s
+    commands: [microk8s]
+    version_flags: [--version]
+  - name: Rancher
+    commands: [rancher]
+    version_flags: [--version]
+  - name: Nomad
+    commands: [nomad]
+    version_flags: [--version]
+  - name: containerd
+    commands: [containerd]
+    version_flags: [--version]
+  - name: CRI-O
+    commands: [crio]
+    version_flags: [--version]
+  - name: OrbStack
+    commands: [orbstack]
+    version_flags: [--version]
+  - name: Colima
+    commands: [colima]
+    version_flags: [--version]
 
+# ============================================================================
+# 8. CLOUD CLI TOOLS
+# ============================================================================
 cloud_tools:
   - name: AWS CLI
-    commands: [aws]
+    commands: [aws, aws-cli]
     version_flags: [--version]
   - name: Azure CLI
-    commands: [az]
+    commands: [az, azure-cli]
     version_flags: [--version]
   - name: Google Cloud SDK
     commands: [gcloud]
     version_flags: [--version]
+  - name: Google Cloud Storage
+    commands: [gsutil]
+    version_flags: [--version]
+  - name: DigitalOcean CLI
+    commands: [doctl]
+    version_flags: [version]
+  - name: IBM Cloud CLI
+    commands: [ibmcloud]
+    version_flags: [--version]
+  - name: Oracle Cloud CLI
+    commands: [oci]
+    version_flags: [--version]
+  - name: Alibaba Cloud CLI
+    commands: [aliyun]
+    version_flags: [--version]
+  - name: Linode CLI
+    commands: [linode-cli]
+    version_flags: [--version]
+  - name: Vultr CLI
+    commands: [vultr-cli]
+    version_flags: [--version]
   - name: Heroku CLI
     commands: [heroku]
+    version_flags: [--version]
+  - name: Fly.io CLI
+    commands: [flyctl]
+    version_flags: [version]
+  - name: Vercel CLI
+    commands: [vercel]
+    version_flags: [--version]
+  - name: Netlify CLI
+    commands: [netlify]
+    version_flags: [--version]
+  - name: Railway CLI
+    commands: [railway]
+    version_flags: [--version]
+  - name: Render CLI
+    commands: [render]
+    version_flags: [--version]
+
+# ============================================================================
+# 9. INFRASTRUCTURE AS CODE
+# ============================================================================
+infrastructure:
+  - name: Terraform
+    commands: [terraform]
+    version_flags: [--version]
+  - name: OpenTofu
+    commands: [tofu]
+    version_flags: [--version]
+  - name: Pulumi
+    commands: [pulumi]
+    version_flags: [version]
+  - name: Ansible
+    commands: [ansible, ansible-playbook]
+    version_flags: [--version]
+  - name: Chef
+    commands: [chef, chef-client]
+    version_flags: [--version]
+  - name: Puppet
+    commands: [puppet]
+    version_flags: [--version]
+  - name: Salt
+    commands: [salt, salt-call]
+    version_flags: [--version]
+  - name: Packer
+    commands: [packer]
+    version_flags: [--version]
+  - name: Vagrant
+    commands: [vagrant]
+    version_flags: [--version]
+  - name: CloudFormation
+    commands: [cloudformation]
+    version_flags: [--version]
+  - name: AWS CDK
+    commands: [cdk]
+    version_flags: [--version]
+  - name: Crossplane
+    commands: [crossplane]
+    version_flags: [--version]
+  - name: Terragrunt
+    commands: [terragrunt]
+    version_flags: [--version]
+  - name: TFLint
+    commands: [tflint]
+    version_flags: [--version]
+  - name: Checkov
+    commands: [checkov]
+    version_flags: [--version]
+  - name: Terratest
+    commands: [terratest]
+    version_flags: [--version]
+
+# ============================================================================
+# 10. CI/CD TOOLS
+# ============================================================================
+cicd:
+  - name: Jenkins
+    commands: [jenkins, jenkins-cli]
+    version_flags: [--version]
+  - name: GitLab Runner
+    commands: [gitlab-runner]
     version_flags: [--version]
   - name: GitHub CLI
     commands: [gh]
     version_flags: [--version]
+  - name: Travis CI
+    commands: [travis]
+    version_flags: [--version]
+  - name: CircleCI
+    commands: [circleci]
+    version_flags: [--version]
+  - name: Drone
+    commands: [drone]
+    version_flags: [--version]
+  - name: Concourse
+    commands: [concourse]
+    version_flags: [--version]
+  - name: Buildkite
+    commands: [buildkite]
+    version_flags: [--version]
+  - name: TeamCity
+    commands: [teamcity]
+    version_flags: [--version]
+  - name: Bamboo
+    commands: [bamboo]
+    version_flags: [--version]
+  - name: Azure Pipelines
+    commands: [azure-pipelines]
+    version_flags: [--version]
+  - name: ArgoCD
+    commands: [argocd]
+    version_flags: [version]
+  - name: Flux
+    commands: [flux]
+    version_flags: [--version]
+  - name: Spinnaker
+    commands: [spinnaker]
+    version_flags: [--version]
 
-build_tools:
-  - name: Make
-    commands: [make]
+# ============================================================================
+# 11. DATABASES & DATABASE TOOLS
+# ============================================================================
+databases:
+  - name: MySQL
+    commands: [mysql, mysqld]
     version_flags: [--version]
-  - name: CMake
-    commands: [cmake]
+  - name: PostgreSQL
+    commands: [psql, postgres]
     version_flags: [--version]
-  - name: Gradle
-    commands: [gradle]
+  - name: SQLite
+    commands: [sqlite3]
     version_flags: [--version]
-  - name: Maven
-    commands: [mvn]
+  - name: MongoDB
+    commands: [mongo, mongod, mongosh]
     version_flags: [--version]
-  - name: Webpack
-    commands: [webpack]
+  - name: Redis CLI
+    commands: [redis-cli]
     version_flags: [--version]
-  - name: Vite
-    commands: [vite]
+  - name: Redis Server
+    commands: [redis-server]
+    version_flags: [--version]
+  - name: InfluxDB
+    commands: [influxdb, influx]
+    version_flags: [version]
+  - name: Cassandra
+    commands: [cassandra]
+    version_flags: [--version]
+  - name: CouchDB
+    commands: [couchdb]
+    version_flags: [--version]
+  - name: Neo4j
+    commands: [neo4j]
+    version_flags: [--version]
+  - name: Elasticsearch
+    commands: [elasticsearch]
+    version_flags: [--version]
+  - name: Kibana
+    commands: [kibana]
+    version_flags: [--version]
+  - name: DynamoDB Local
+    commands: [dynamodb-local]
+    version_flags: [--version]
+  - name: CockroachDB
+    commands: [cockroach]
+    version_flags: [version]
+  - name: pgcli
+    commands: [pgcli]
+    version_flags: [--version]
+  - name: mycli
+    commands: [mycli]
+    version_flags: [--version]
+  - name: litecli
+    commands: [litecli]
+    version_flags: [--version]
+  - name: usql
+    commands: [usql]
+    version_flags: [--version]
+  - name: DBeaver
+    commands: [dbeaver]
+    version_flags: [--version]
+  - name: DataGrip
+    commands: [datagrip]
     version_flags: [--version]
 
+# ============================================================================
+# 12. WEB SERVERS & PROXIES
+# ============================================================================
+web_servers:
+  - name: Nginx
+    commands: [nginx]
+    version_flags: [-v]
+  - name: Apache
+    commands: [apache2, httpd]
+    version_flags: [-v]
+  - name: Caddy
+    commands: [caddy]
+    version_flags: [version]
+  - name: Traefik
+    commands: [traefik]
+    version_flags: [version]
+  - name: Envoy
+    commands: [envoy]
+    version_flags: [--version]
+  - name: HAProxy
+    commands: [haproxy]
+    version_flags: [-v]
+  - name: Lighttpd
+    commands: [lighttpd]
+    version_flags: [-v]
+  - name: H2O
+    commands: [h2o]
+    version_flags: [--version]
+  - name: serve
+    commands: [serve]
+    version_flags: [--version]
+  - name: http-server
+    commands: [http-server]
+    version_flags: [--version]
+  - name: live-server
+    commands: [live-server]
+    version_flags: [--version]
+
+# ============================================================================
+# 13. API TOOLS
+# ============================================================================
+api_tools:
+  - name: curl
+    commands: [curl]
+    version_flags: [--version]
+  - name: wget
+    commands: [wget]
+    version_flags: [--version]
+  - name: HTTPie
+    commands: [httpie, http]
+    version_flags: [--version]
+  - name: xh
+    commands: [xh]
+    version_flags: [--version]
+  - name: curlie
+    commands: [curlie]
+    version_flags: [--version]
+  - name: Postman
+    commands: [postman]
+    version_flags: [--version]
+  - name: Insomnia
+    commands: [insomnia]
+    version_flags: [--version]
+  - name: grpcurl
+    commands: [grpcurl]
+    version_flags: [--version]
+  - name: Evans
+    commands: [evans]
+    version_flags: [--version]
+  - name: Swagger
+    commands: [swagger]
+    version_flags: [--version]
+  - name: OpenAPI Generator
+    commands: [openapi-generator]
+    version_flags: [version]
+  - name: apictl
+    commands: [apictl]
+    version_flags: [version]
+
+# ============================================================================
+# 14. TEXT EDITORS & IDEs
+# ============================================================================
 editors:
   - name: Vim
-    commands: [vim]
+    commands: [vim, vi]
     version_flags: [--version]
   - name: Neovim
-    commands: [nvim]
+    commands: [nvim, neovim]
     version_flags: [--version]
   - name: Emacs
     commands: [emacs]
@@ -179,11 +814,71 @@ editors:
   - name: Nano
     commands: [nano]
     version_flags: [--version]
+  - name: Micro
+    commands: [micro]
+    version_flags: [--version]
+  - name: Helix
+    commands: [helix, hx]
+    version_flags: [--version]
   - name: VSCode
     commands: [code]
     version_flags: [--version]
+  - name: VSCode Insiders
+    commands: [code-insiders]
+    version_flags: [--version]
+  - name: Sublime Text
+    commands: [subl]
+    version_flags: [--version]
+  - name: Atom
+    commands: [atom]
+    version_flags: [--version]
+  - name: IntelliJ IDEA
+    commands: [idea]
+    version_flags: [--version]
+  - name: PyCharm
+    commands: [pycharm]
+    version_flags: [--version]
+  - name: WebStorm
+    commands: [webstorm]
+    version_flags: [--version]
+  - name: GoLand
+    commands: [goland]
+    version_flags: [--version]
+  - name: RubyMine
+    commands: [rubymine]
+    version_flags: [--version]
+  - name: PhpStorm
+    commands: [phpstorm]
+    version_flags: [--version]
+  - name: CLion
+    commands: [clion]
+    version_flags: [--version]
+  - name: Rider
+    commands: [rider]
+    version_flags: [--version]
+  - name: Eclipse
+    commands: [eclipse]
+    version_flags: [--version]
+  - name: NetBeans
+    commands: [netbeans]
+    version_flags: [--version]
 
+# ============================================================================
+# 15. TERMINAL MULTIPLEXERS & SHELLS
+# ============================================================================
 shells:
+  - name: tmux
+    commands: [tmux]
+    version_flags: [-V]
+  - name: screen
+    commands: [screen]
+    version_flags: [--version]
+  - name: Zellij
+    commands: [zellij]
+    version_flags: [--version]
+  - name: Byobu
+    commands: [byobu]
+    version_flags: [--version]
   - name: Bash
     commands: [bash]
     version_flags: [--version]
@@ -196,54 +891,1549 @@ shells:
   - name: PowerShell
     commands: [pwsh, powershell]
     version_flags: [--version]
+  - name: Ksh
+    commands: [ksh]
+    version_flags: [--version]
+  - name: Tcsh
+    commands: [tcsh]
+    version_flags: [--version]
+  - name: Dash
+    commands: [dash]
+    version_flags: [--version]
+  - name: Ash
+    commands: [ash]
+    version_flags: [--version]
+  - name: Nushell
+    commands: [nushell, nu]
+    version_flags: [--version]
+  - name: Xonsh
+    commands: [xonsh]
+    version_flags: [--version]
+  - name: Elvish
+    commands: [elvish]
+    version_flags: [--version]
+  - name: Oil
+    commands: [oil]
+    version_flags: [--version]
+  - name: Ion
+    commands: [ion]
+    version_flags: [--version]
 
-databases:
-  - name: MySQL
-    commands: [mysql]
+# ============================================================================
+# 16. SHELL ENHANCEMENTS
+# ============================================================================
+shell_enhancements:
+  - name: Oh My Zsh
+    commands: [omz]
     version_flags: [--version]
-  - name: PostgreSQL
-    commands: [psql]
+  - name: Oh My Posh
+    commands: [oh-my-posh]
     version_flags: [--version]
-  - name: SQLite
-    commands: [sqlite3]
+  - name: Starship
+    commands: [starship]
     version_flags: [--version]
-  - name: MongoDB
-    commands: [mongo, mongosh]
+  - name: Powerlevel10k
+    commands: [p10k]
     version_flags: [--version]
-  - name: Redis
-    commands: [redis-cli]
+  - name: fzf
+    commands: [fzf]
+    version_flags: [--version]
+  - name: z
+    commands: [z]
+    version_flags: [--version]
+  - name: zoxide
+    commands: [zoxide]
+    version_flags: [--version]
+  - name: autojump
+    commands: [autojump]
+    version_flags: [--version]
+  - name: fasd
+    commands: [fasd]
+    version_flags: [--version]
+  - name: thefuck
+    commands: [thefuck, fuck]
+    version_flags: [--version]
+  - name: atuin
+    commands: [atuin]
+    version_flags: [--version]
+  - name: mcfly
+    commands: [mcfly]
+    version_flags: [--version]
+  - name: hstr
+    commands: [hstr]
     version_flags: [--version]
 
-infrastructure:
-  - name: Terraform
-    commands: [terraform]
+# ============================================================================
+# 17. FILE MANAGERS & NAVIGATORS
+# ============================================================================
+file_managers:
+  - name: ranger
+    commands: [ranger]
     version_flags: [--version]
-  - name: Ansible
-    commands: [ansible]
+  - name: nnn
+    commands: [nnn]
+    version_flags: [-v]
+  - name: lf
+    commands: [lf]
     version_flags: [--version]
-  - name: Vagrant
-    commands: [vagrant]
+  - name: vifm
+    commands: [vifm]
+    version_flags: [--version]
+  - name: Midnight Commander
+    commands: [mc, midnight-commander]
+    version_flags: [--version]
+  - name: fff
+    commands: [fff]
+    version_flags: [--version]
+  - name: broot
+    commands: [broot]
+    version_flags: [--version]
+  - name: walk
+    commands: [walk]
+    version_flags: [--version]
+  - name: xplr
+    commands: [xplr]
+    version_flags: [--version]
+  - name: clifm
+    commands: [clifm]
     version_flags: [--version]
 
-utilities:
-  - name: curl
-    commands: [curl]
+# ============================================================================
+# 18. SEARCH & FIND TOOLS
+# ============================================================================
+search_tools:
+  - name: ripgrep
+    commands: [rg, ripgrep]
     version_flags: [--version]
-  - name: wget
-    commands: [wget]
+  - name: the silver searcher
+    commands: [ag, the-silver-searcher]
+    version_flags: [--version]
+  - name: ack
+    commands: [ack]
+    version_flags: [--version]
+  - name: fd
+    commands: [fd]
+    version_flags: [--version]
+  - name: find
+    commands: [find]
+    version_flags: [--version]
+  - name: locate
+    commands: [locate]
+    version_flags: [--version]
+  - name: grep
+    commands: [grep]
+    version_flags: [--version]
+  - name: egrep
+    commands: [egrep]
+    version_flags: [--version]
+  - name: fgrep
+    commands: [fgrep]
+    version_flags: [--version]
+  - name: skim
+    commands: [skim, sk]
+    version_flags: [--version]
+  - name: peco
+    commands: [peco]
+    version_flags: [--version]
+  - name: percol
+    commands: [percol]
+    version_flags: [--version]
+
+# ============================================================================
+# 19. FILE OPERATIONS
+# ============================================================================
+file_operations:
+  - name: rsync
+    commands: [rsync]
+    version_flags: [--version]
+  - name: scp
+    commands: [scp]
+    version_flags: []
+  - name: sftp
+    commands: [sftp]
+    version_flags: []
+  - name: rclone
+    commands: [rclone]
+    version_flags: [version]
+  - name: syncthing
+    commands: [syncthing]
+    version_flags: [--version]
+  - name: restic
+    commands: [restic]
+    version_flags: [version]
+  - name: borg
+    commands: [borg]
+    version_flags: [--version]
+  - name: duplicity
+    commands: [duplicity]
+    version_flags: [--version]
+  - name: tar
+    commands: [tar]
+    version_flags: [--version]
+  - name: zip
+    commands: [zip]
+    version_flags: [--version]
+  - name: unzip
+    commands: [unzip]
+    version_flags: []
+  - name: 7z
+    commands: [7z]
+    version_flags: []
+  - name: rar
+    commands: [rar]
+    version_flags: []
+  - name: unrar
+    commands: [unrar]
+    version_flags: []
+  - name: gzip
+    commands: [gzip]
+    version_flags: [--version]
+  - name: gunzip
+    commands: [gunzip]
+    version_flags: [--version]
+  - name: bzip2
+    commands: [bzip2]
+    version_flags: [--version]
+  - name: bunzip2
+    commands: [bunzip2]
+    version_flags: [--version]
+  - name: xz
+    commands: [xz]
+    version_flags: [--version]
+  - name: zstd
+    commands: [zstd]
+    version_flags: [--version]
+
+# ============================================================================
+# 20. TEXT PROCESSING
+# ============================================================================
+text_processing:
+  - name: sed
+    commands: [sed]
+    version_flags: [--version]
+  - name: awk
+    commands: [awk]
+    version_flags: [--version]
+  - name: cut
+    commands: [cut]
+    version_flags: [--version]
+  - name: sort
+    commands: [sort]
+    version_flags: [--version]
+  - name: uniq
+    commands: [uniq]
+    version_flags: [--version]
+  - name: tr
+    commands: [tr]
+    version_flags: [--version]
+  - name: paste
+    commands: [paste]
+    version_flags: [--version]
+  - name: join
+    commands: [join]
+    version_flags: [--version]
+  - name: column
+    commands: [column]
     version_flags: [--version]
   - name: jq
     commands: [jq]
     version_flags: [--version]
-  - name: tmux
-    commands: [tmux]
-    version_flags: [-V]
-  - name: screen
-    commands: [screen]
+  - name: yq
+    commands: [yq]
     version_flags: [--version]
+  - name: xq
+    commands: [xq]
+    version_flags: [--version]
+  - name: xsv
+    commands: [xsv]
+    version_flags: [--version]
+  - name: csvkit
+    commands: [csvkit]
+    version_flags: [--version]
+  - name: Miller
+    commands: [miller, mlr]
+    version_flags: [--version]
+  - name: dasel
+    commands: [dasel]
+    version_flags: [version]
+
+# ============================================================================
+# 21. SYSTEM MONITORING
+# ============================================================================
+monitoring:
   - name: htop
     commands: [htop]
     version_flags: [--version]
+  - name: btop
+    commands: [btop]
+    version_flags: [--version]
+  - name: gtop
+    commands: [gtop]
+    version_flags: [--version]
+  - name: bashtop
+    commands: [bashtop]
+    version_flags: [--version]
+  - name: bpytop
+    commands: [bpytop]
+    version_flags: [--version]
+  - name: glances
+    commands: [glances]
+    version_flags: [--version]
+  - name: top
+    commands: [top]
+    version_flags: [-v]
+  - name: iostat
+    commands: [iostat]
+    version_flags: [-V]
+  - name: vmstat
+    commands: [vmstat]
+    version_flags: [-V]
+  - name: netstat
+    commands: [netstat]
+    version_flags: [--version]
+  - name: ss
+    commands: [ss]
+    version_flags: [--version]
+  - name: lsof
+    commands: [lsof]
+    version_flags: [-v]
+  - name: ps
+    commands: [ps]
+    version_flags: [--version]
+  - name: pstree
+    commands: [pstree]
+    version_flags: [--version]
+  - name: procs
+    commands: [procs]
+    version_flags: [--version]
+  - name: bottom
+    commands: [bottom, btm]
+    version_flags: [--version]
+  - name: zenith
+    commands: [zenith]
+    version_flags: [--version]
+
+# ============================================================================
+# 22. NETWORK TOOLS
+# ============================================================================
+network_tools:
+  - name: ping
+    commands: [ping]
+    version_flags: [-V]
+  - name: traceroute
+    commands: [traceroute, tracert]
+    version_flags: [--version]
+  - name: nslookup
+    commands: [nslookup]
+    version_flags: []
+  - name: dig
+    commands: [dig]
+    version_flags: [-v]
+  - name: host
+    commands: [host]
+    version_flags: [-V]
+  - name: whois
+    commands: [whois]
+    version_flags: [--version]
+  - name: netcat
+    commands: [netcat, nc]
+    version_flags: [--version]
+  - name: nmap
+    commands: [nmap]
+    version_flags: [--version]
+  - name: tcpdump
+    commands: [tcpdump]
+    version_flags: [--version]
+  - name: Wireshark
+    commands: [wireshark]
+    version_flags: [--version]
+  - name: tshark
+    commands: [tshark]
+    version_flags: [--version]
+  - name: iftop
+    commands: [iftop]
+    version_flags: [--version]
+  - name: nethogs
+    commands: [nethogs]
+    version_flags: [-V]
+  - name: bandwhich
+    commands: [bandwhich]
+    version_flags: [--version]
+  - name: gping
+    commands: [gping]
+    version_flags: [--version]
+  - name: mtr
+    commands: [mtr]
+    version_flags: [--version]
+  - name: speedtest-cli
+    commands: [speedtest-cli]
+    version_flags: [--version]
+
+# ============================================================================
+# 23. DISK & FILE UTILITIES
+# ============================================================================
+disk_utilities:
+  - name: df
+    commands: [df]
+    version_flags: [--version]
+  - name: du
+    commands: [du]
+    version_flags: [--version]
+  - name: ncdu
+    commands: [ncdu]
+    version_flags: [--version]
+  - name: dust
+    commands: [dust]
+    version_flags: [--version]
+  - name: duf
+    commands: [duf]
+    version_flags: [--version]
+  - name: diskus
+    commands: [diskus]
+    version_flags: [--version]
+  - name: lsblk
+    commands: [lsblk]
+    version_flags: [--version]
+  - name: fdisk
+    commands: [fdisk]
+    version_flags: [--version]
+  - name: parted
+    commands: [parted]
+    version_flags: [--version]
   - name: tree
     commands: [tree]
+    version_flags: [--version]
+  - name: exa
+    commands: [exa]
+    version_flags: [--version]
+  - name: eza
+    commands: [eza]
+    version_flags: [--version]
+  - name: lsd
+    commands: [lsd]
+    version_flags: [--version]
+  - name: ls
+    commands: [ls]
+    version_flags: [--version]
+  - name: bat
+    commands: [bat]
+    version_flags: [--version]
+  - name: cat
+    commands: [cat]
+    version_flags: [--version]
+  - name: less
+    commands: [less]
+    version_flags: [--version]
+  - name: more
+    commands: [more]
+    version_flags: [--version]
+  - name: tail
+    commands: [tail]
+    version_flags: [--version]
+  - name: head
+    commands: [head]
+    version_flags: [--version]
+  - name: diff
+    commands: [diff]
+    version_flags: [--version]
+  - name: delta
+    commands: [delta]
+    version_flags: [--version]
+  - name: difft
+    commands: [difft]
+    version_flags: [--version]
+  - name: colordiff
+    commands: [colordiff]
+    version_flags: [--version]
+
+# ============================================================================
+# 24. PROCESS MANAGEMENT
+# ============================================================================
+process_management:
+  - name: kill
+    commands: [kill]
+    version_flags: []
+  - name: pkill
+    commands: [pkill]
+    version_flags: [--version]
+  - name: killall
+    commands: [killall]
+    version_flags: [--version]
+  - name: pgrep
+    commands: [pgrep]
+    version_flags: [--version]
+  - name: systemctl
+    commands: [systemctl]
+    version_flags: [--version]
+  - name: service
+    commands: [service]
+    version_flags: [--version]
+  - name: supervisorctl
+    commands: [supervisorctl]
+    version_flags: [version]
+  - name: pm2
+    commands: [pm2]
+    version_flags: [--version]
+  - name: nodemon
+    commands: [nodemon]
+    version_flags: [--version]
+  - name: foreman
+    commands: [foreman]
+    version_flags: [--version]
+  - name: overmind
+    commands: [overmind]
+    version_flags: [--version]
+
+# ============================================================================
+# 25. DOCUMENTATION TOOLS
+# ============================================================================
+documentation:
+  - name: man
+    commands: [man]
+    version_flags: [--version]
+  - name: tldr
+    commands: [tldr, tealdeer]
+    version_flags: [--version]
+  - name: cheat
+    commands: [cheat]
+    version_flags: [--version]
+  - name: navi
+    commands: [navi]
+    version_flags: [--version]
+  - name: eg
+    commands: [eg]
+    version_flags: [--version]
+  - name: howdoi
+    commands: [howdoi]
+    version_flags: [--version]
+  - name: how2
+    commands: [how2]
+    version_flags: [--version]
+
+# ============================================================================
+# 26. GIT TOOLS & EXTENSIONS
+# ============================================================================
+git_tools:
+  - name: GitHub CLI
+    commands: [gh]
+    version_flags: [--version]
+  - name: GitLab CLI
+    commands: [glab]
+    version_flags: [--version]
+  - name: git-flow
+    commands: [git-flow]
+    version_flags: [version]
+  - name: git-lfs
+    commands: [git-lfs]
+    version_flags: [version]
+  - name: gitui
+    commands: [gitui]
+    version_flags: [--version]
+  - name: lazygit
+    commands: [lazygit]
+    version_flags: [--version]
+  - name: tig
+    commands: [tig]
+    version_flags: [--version]
+  - name: gh-dash
+    commands: [gh-dash]
+    version_flags: [--version]
+  - name: git-extras
+    commands: [git-extras]
+    version_flags: [--version]
+  - name: hub
+    commands: [hub]
+    version_flags: [--version]
+  - name: git-open
+    commands: [git-open]
+    version_flags: [--version]
+  - name: git-standup
+    commands: [git-standup]
+    version_flags: [--version]
+  - name: git-recent
+    commands: [git-recent]
+    version_flags: [--version]
+  - name: gource
+    commands: [gource]
+    version_flags: [--version]
+  - name: onefetch
+    commands: [onefetch]
+    version_flags: [--version]
+
+# ============================================================================
+# 27. LINTERS & FORMATTERS
+# ============================================================================
+linters:
+  - name: ESLint
+    commands: [eslint]
+    version_flags: [--version]
+  - name: Prettier
+    commands: [prettier]
+    version_flags: [--version]
+  - name: Black
+    commands: [black]
+    version_flags: [--version]
+  - name: autopep8
+    commands: [autopep8]
+    version_flags: [--version]
+  - name: pylint
+    commands: [pylint]
+    version_flags: [--version]
+  - name: flake8
+    commands: [flake8]
+    version_flags: [--version]
+  - name: mypy
+    commands: [mypy]
+    version_flags: [--version]
+  - name: RuboCop
+    commands: [rubocop]
+    version_flags: [--version]
+  - name: gofmt
+    commands: [gofmt]
+    version_flags: []
+  - name: goimports
+    commands: [goimports]
+    version_flags: []
+  - name: rustfmt
+    commands: [rustfmt]
+    version_flags: [--version]
+  - name: clippy
+    commands: [clippy, cargo-clippy]
+    version_flags: [--version]
+  - name: ShellCheck
+    commands: [shellcheck]
+    version_flags: [--version]
+  - name: shfmt
+    commands: [shfmt]
+    version_flags: [--version]
+  - name: Hadolint
+    commands: [hadolint]
+    version_flags: [--version]
+  - name: yamllint
+    commands: [yamllint]
+    version_flags: [--version]
+  - name: jsonlint
+    commands: [jsonlint]
+    version_flags: [--version]
+  - name: markdownlint
+    commands: [markdownlint]
+    version_flags: [--version]
+  - name: ansible-lint
+    commands: [ansible-lint]
+    version_flags: [--version]
+
+# ============================================================================
+# 28. SECURITY & SECRET MANAGEMENT
+# ============================================================================
+security:
+  - name: Vault
+    commands: [vault]
+    version_flags: [--version]
+  - name: SOPS
+    commands: [sops]
+    version_flags: [--version]
+  - name: age
+    commands: [age]
+    version_flags: [--version]
+  - name: GPG
+    commands: [gpg, gpg2]
+    version_flags: [--version]
+  - name: SSH
+    commands: [ssh]
+    version_flags: [-V]
+  - name: ssh-agent
+    commands: [ssh-agent]
+    version_flags: []
+  - name: ssh-keygen
+    commands: [ssh-keygen]
+    version_flags: []
+  - name: OpenSSL
+    commands: [openssl]
+    version_flags: [version]
+  - name: Certbot
+    commands: [certbot]
+    version_flags: [--version]
+  - name: Let's Encrypt
+    commands: [letsencrypt]
+    version_flags: [--version]
+  - name: aws-vault
+    commands: [aws-vault]
+    version_flags: [--version]
+  - name: chamber
+    commands: [chamber]
+    version_flags: [version]
+
+# ============================================================================
+# 29. LOG ANALYSIS
+# ============================================================================
+log_analysis:
+  - name: lnav
+    commands: [lnav]
+    version_flags: [-V]
+  - name: GoAccess
+    commands: [goaccess]
+    version_flags: [--version]
+  - name: logcli
+    commands: [logcli]
+    version_flags: [--version]
+  - name: stern
+    commands: [stern]
+    version_flags: [--version]
+  - name: kail
+    commands: [kail]
+    version_flags: [--version]
+  - name: kubetail
+    commands: [kubetail]
+    version_flags: [--version]
+
+# ============================================================================
+# 30. PRODUCTIVITY & UTILITIES
+# ============================================================================
+productivity:
+  - name: todo.txt
+    commands: [todo.txt, t]
+    version_flags: [--version]
+  - name: Taskwarrior
+    commands: [taskwarrior, task]
+    version_flags: [--version]
+  - name: Timewarrior
+    commands: [timewarrior, timew]
+    version_flags: [--version]
+  - name: Watson
+    commands: [watson]
+    version_flags: [--version]
+  - name: Calcurse
+    commands: [calcurse]
+    version_flags: [--version]
+  - name: Remind
+    commands: [remind]
+    version_flags: [--version]
+  - name: gcalcli
+    commands: [gcalcli]
+    version_flags: [--version]
+  - name: Newsboat
+    commands: [newsboat]
+    version_flags: [--version]
+  - name: wttr
+    commands: [wttr]
+    version_flags: [--version]
+  - name: cointop
+    commands: [cointop]
+    version_flags: [--version]
+  - name: mapscii
+    commands: [mapscii]
+    version_flags: [--version]
+  - name: glow
+    commands: [glow]
+    version_flags: [--version]
+  - name: mdcat
+    commands: [mdcat]
+    version_flags: [--version]
+  - name: rich-cli
+    commands: [rich-cli]
+    version_flags: [--version]
+  - name: slides
+    commands: [slides]
+    version_flags: [--version]
+  - name: present
+    commands: [present]
+    version_flags: [--version]
+  - name: carbon-now-cli
+    commands: [carbon-now-cli]
+    version_flags: [--version]
+  - name: asciinema
+    commands: [asciinema]
+    version_flags: [--version]
+  - name: terminalizer
+    commands: [terminalizer]
+    version_flags: [--version]
+
+# ============================================================================
+# 31. AI & MACHINE LEARNING
+# ============================================================================
+ai_ml:
+  - name: Jupyter
+    commands: [jupyter]
+    version_flags: [--version]
+  - name: IPython
+    commands: [ipython]
+    version_flags: [--version]
+  - name: TensorBoard
+    commands: [tensorboard]
+    version_flags: [--version]
+  - name: MLflow
+    commands: [mlflow]
+    version_flags: [--version]
+  - name: DVC
+    commands: [dvc]
+    version_flags: [version]
+
+# ============================================================================
+# 32. MESSAGING & COMMUNICATION
+# ============================================================================
+messaging:
+  - name: Slack CLI
+    commands: [slack-cli]
+    version_flags: [--version]
+  - name: Discord CLI
+    commands: [discord-cli]
+    version_flags: [--version]
+  - name: Telegram CLI
+    commands: [telegram-cli]
+    version_flags: [--version]
+  - name: WeeChat
+    commands: [weechat]
+    version_flags: [--version]
+  - name: Irssi
+    commands: [irssi]
+    version_flags: [--version]
+
+# ============================================================================
+# 33. BACKUP & SYNC
+# ============================================================================
+backup_sync:
+  - name: rclone
+    commands: [rclone]
+    version_flags: [version]
+  - name: syncthing
+    commands: [syncthing]
+    version_flags: [--version]
+  - name: rsync
+    commands: [rsync]
+    version_flags: [--version]
+  - name: duplicity
+    commands: [duplicity]
+    version_flags: [--version]
+  - name: restic
+    commands: [restic]
+    version_flags: [version]
+  - name: borg
+    commands: [borg]
+    version_flags: [--version]
+
+# ============================================================================
+# 34. SERVERLESS & EDGE
+# ============================================================================
+serverless:
+  - name: Serverless Framework
+    commands: [serverless, sls]
+    version_flags: [--version]
+  - name: AWS SAM
+    commands: [sam]
+    version_flags: [--version]
+  - name: Azure Functions
+    commands: [functions]
+    version_flags: [--version]
+  - name: Google Cloud Functions
+    commands: [gcloud]
+    version_flags: [functions, --version]
+  - name: Wrangler
+    commands: [wrangler]
+    version_flags: [--version]
+
+# ============================================================================
+# 35. MODERN RUST ALTERNATIVES
+# ============================================================================
+rust_alternatives:
+  - name: bat (cat replacement)
+    commands: [bat]
+    version_flags: [--version]
+  - name: exa (ls replacement)
+    commands: [exa]
+    version_flags: [--version]
+  - name: eza (ls replacement)
+    commands: [eza]
+    version_flags: [--version]
+  - name: fd (find replacement)
+    commands: [fd]
+    version_flags: [--version]
+  - name: ripgrep (grep replacement)
+    commands: [rg, ripgrep]
+    version_flags: [--version]
+  - name: sd (sed replacement)
+    commands: [sd]
+    version_flags: [--version]
+  - name: dust (du replacement)
+    commands: [dust]
+    version_flags: [--version]
+  - name: tokei (cloc replacement)
+    commands: [tokei]
+    version_flags: [--version]
+  - name: hyperfine
+    commands: [hyperfine]
+    version_flags: [--version]
+  - name: zoxide (cd replacement)
+    commands: [zoxide]
+    version_flags: [--version]
+  - name: procs (ps replacement)
+    commands: [procs]
+    version_flags: [--version]
+  - name: bottom (top replacement)
+    commands: [bottom, btm]
+    version_flags: [--version]
+  - name: delta (diff replacement)
+    commands: [delta]
+    version_flags: [--version]
+  - name: gitui (git ui)
+    commands: [gitui]
+    version_flags: [--version]
+  - name: starship (prompt)
+    commands: [starship]
+    version_flags: [--version]
+
+# ============================================================================
+# 36. MULTIMEDIA & ENTERTAINMENT
+# ============================================================================
+multimedia:
+  - name: newsboat
+    commands: [newsboat]
+    version_flags: [--version]
+  - name: cmus
+    commands: [cmus]
+    version_flags: [--version]
+  - name: pianobar
+    commands: [pianobar]
+    version_flags: [--version]
+  - name: mpd
+    commands: [mpd]
+    version_flags: [--version]
+  - name: ncmpcpp
+    commands: [ncmpcpp]
+    version_flags: [--version]
+  - name: moc
+    commands: [moc]
+    version_flags: [--version]
+  - name: musikcube
+    commands: [musikcube]
+    version_flags: [--version]
+  - name: beets
+    commands: [beets, beet]
+    version_flags: [--version]
+  - name: spotatui
+    commands: [spotatui]
+    version_flags: [--version]
+  - name: dzr
+    commands: [dzr]
+    version_flags: [--version]
+  - name: youtube-dl
+    commands: [youtube-dl]
+    version_flags: [--version]
+  - name: yt-dlp
+    commands: [yt-dlp]
+    version_flags: [--version]
+  - name: streamlink
+    commands: [streamlink]
+    version_flags: [--version]
+  - name: mps-youtube
+    commands: [mps-youtube, mpsyt]
+    version_flags: [--version]
+  - name: mpv
+    commands: [mpv]
+    version_flags: [--version]
+  - name: editly
+    commands: [editly]
+    version_flags: [--version]
+  - name: moviemon
+    commands: [moviemon]
+    version_flags: [--version]
+  - name: ffmpeg
+    commands: [ffmpeg]
+    version_flags: [--version]
+  - name: ffprobe
+    commands: [ffprobe]
+    version_flags: [--version]
+  - name: aria2
+    commands: [aria2c]
+    version_flags: [--version]
+
+# ============================================================================
+# 37. GAMES & FUN
+# ============================================================================
+games:
+  - name: bash2048
+    commands: [bash2048]
+    version_flags: [--version]
+  - name: nudoku
+    commands: [nudoku]
+    version_flags: [--version]
+  - name: pokete
+    commands: [pokete]
+    version_flags: [--version]
+
+# ============================================================================
+# 38. E-READERS & BOOKS
+# ============================================================================
+ereaders:
+  - name: epr
+    commands: [epr]
+    version_flags: [--version]
+  - name: epy
+    commands: [epy]
+    version_flags: [--version]
+
+# ============================================================================
+# 39. DEVELOPMENT UTILITIES
+# ============================================================================
+dev_utilities:
+  - name: legit
+    commands: [legit]
+    version_flags: [--version]
+  - name: mklicense
+    commands: [mklicense]
+    version_flags: [--version]
+  - name: rebound
+    commands: [rebound]
+    version_flags: [--version]
+  - name: foy
+    commands: [foy]
+    version_flags: [--version]
+  - name: bcal
+    commands: [bcal]
+    version_flags: [--version]
+  - name: bitwise
+    commands: [bitwise]
+    version_flags: [--version]
+  - name: cgasm
+    commands: [cgasm]
+    version_flags: [--version]
+  - name: grex
+    commands: [grex]
+    version_flags: [--version]
+  - name: iola
+    commands: [iola]
+    version_flags: [--version]
+  - name: add-gitignore
+    commands: [add-gitignore]
+    version_flags: [--version]
+  - name: is-up-cli
+    commands: [is-up-cli, is-up]
+    version_flags: [--version]
+  - name: reachable
+    commands: [reachable]
+    version_flags: [--version]
+  - name: diff2html-cli
+    commands: [diff2html]
+    version_flags: [--version]
+  - name: pre-commit
+    commands: [pre-commit]
+    version_flags: [--version]
+  - name: overcommit
+    commands: [overcommit]
+    version_flags: [--version]
+
+# ============================================================================
+# 40. FRONTEND DEVELOPMENT
+# ============================================================================
+frontend_dev:
+  - name: caniuse-cmd
+    commands: [caniuse]
+    version_flags: [--version]
+  - name: strip-css-comments-cli
+    commands: [strip-css-comments]
+    version_flags: [--version]
+  - name: viewport-list-cli
+    commands: [viewport-list]
+    version_flags: [--version]
+  - name: surge
+    commands: [surge]
+    version_flags: [--version]
+
+# ============================================================================
+# 41. TUNNELING & LOCALHOST
+# ============================================================================
+tunneling:
+  - name: localtunnel
+    commands: [lt]
+    version_flags: [--version]
+  - name: tunnelmole
+    commands: [tunnelmole, tmole]
+    version_flags: [--version]
+  - name: ngrok
+    commands: [ngrok]
+    version_flags: [version]
+
+# ============================================================================
+# 42. MOBILE DEVELOPMENT
+# ============================================================================
+mobile_dev:
+  - name: mobicon-cli
+    commands: [mobicon]
+    version_flags: [--version]
+  - name: mobisplash-cli
+    commands: [mobisplash]
+    version_flags: [--version]
+  - name: deviceframe
+    commands: [deviceframe]
+    version_flags: [--version]
+
+# ============================================================================
+# 43. ADDITIONAL DATABASE TOOLS
+# ============================================================================
+database_extra:
+  - name: sqlline
+    commands: [sqlline]
+    version_flags: [--version]
+  - name: iredis
+    commands: [iredis]
+    version_flags: [--version]
+
+# ============================================================================
+# 44. DEVOPS EXTRAS
+# ============================================================================
+devops_extras:
+  - name: htconvert
+    commands: [htconvert]
+    version_flags: [--version]
+  - name: s3cmd
+    commands: [s3cmd]
+    version_flags: [--version]
+  - name: ops
+    commands: [ops]
+    version_flags: [--version]
+  - name: flog
+    commands: [flog]
+    version_flags: [--version]
+  - name: ipfs-deploy
+    commands: [ipfs-deploy, ipd]
+    version_flags: [--version]
+  - name: updatecli
+    commands: [updatecli]
+    version_flags: [version]
+  - name: telert
+    commands: [telert]
+    version_flags: [--version]
+  - name: logdy
+    commands: [logdy]
+    version_flags: [--version]
+  - name: s5cmd
+    commands: [s5cmd]
+    version_flags: [--version]
+  - name: updo
+    commands: [updo]
+    version_flags: [--version]
+  - name: cronboard
+    commands: [cronboard]
+    version_flags: [--version]
+  - name: s3m
+    commands: [s3m]
+    version_flags: [--version]
+
+# ============================================================================
+# 45. DOCKER EXTRAS
+# ============================================================================
+docker_extras:
+  - name: lstags
+    commands: [lstags]
+    version_flags: [--version]
+  - name: dockly
+    commands: [dockly]
+    version_flags: [--version]
+  - name: ctop
+    commands: [ctop]
+    version_flags: [--version]
+
+# ============================================================================
+# 46. RELEASE MANAGEMENT
+# ============================================================================
+release_management:
+  - name: release-it
+    commands: [release-it]
+    version_flags: [--version]
+  - name: clog
+    commands: [clog]
+    version_flags: [--version]
+  - name: np
+    commands: [np]
+    version_flags: [--version]
+  - name: semantic-release
+    commands: [semantic-release]
+    version_flags: [--version]
+
+# ============================================================================
+# 47. NPM UTILITIES
+# ============================================================================
+npm_utilities:
+  - name: npm-name-cli
+    commands: [npm-name]
+    version_flags: [--version]
+  - name: npm-user-cli
+    commands: [npm-user]
+    version_flags: [--version]
+  - name: npm-home
+    commands: [npm-home]
+    version_flags: [--version]
+  - name: pkg-dir-cli
+    commands: [pkg-dir]
+    version_flags: [--version]
+  - name: npm-check-updates
+    commands: [ncu]
+    version_flags: [--version]
+  - name: wipe-modules
+    commands: [wipe-modules]
+    version_flags: [--version]
+
+# ============================================================================
+# 48. PROJECT SCAFFOLDING
+# ============================================================================
+scaffolding:
+  - name: yeoman
+    commands: [yo]
+    version_flags: [--version]
+  - name: boilr
+    commands: [boilr]
+    version_flags: [--version]
+  - name: cookiecutter
+    commands: [cookiecutter]
+    version_flags: [--version]
+  - name: mevn-cli
+    commands: [mevn]
+    version_flags: [--version]
+  - name: scaffold-static
+    commands: [scaffold-static]
+    version_flags: [--version]
+
+# ============================================================================
+# 49. HTTP SERVERS
+# ============================================================================
+http_servers:
+  - name: simplehttp
+    commands: [simplehttp]
+    version_flags: [--version]
+  - name: shell2http
+    commands: [shell2http]
+    version_flags: [--version]
+
+# ============================================================================
+# 50. HTTP CLIENT EXTRAS
+# ============================================================================
+http_client_extras:
+  - name: ain
+    commands: [ain]
+    version_flags: [--version]
+  - name: atac
+    commands: [atac]
+    version_flags: [--version]
+
+# ============================================================================
+# 51. TESTING EXTRAS
+# ============================================================================
+testing_extras:
+  - name: shellspec
+    commands: [shellspec]
+    version_flags: [--version]
+  - name: loadtest
+    commands: [loadtest]
+    version_flags: [--version]
+  - name: stepci
+    commands: [stepci]
+    version_flags: [--version]
+  - name: bats
+    commands: [bats]
+    version_flags: [--version]
+
+# ============================================================================
+# 52. PRODUCTIVITY EXTRAS
+# ============================================================================
+productivity_extras:
+  - name: doing
+    commands: [doing]
+    version_flags: [--version]
+  - name: ffscreencast
+    commands: [ffscreencast]
+    version_flags: [--version]
+  - name: meetup-cli
+    commands: [meetup]
+    version_flags: [--version]
+  - name: neomutt
+    commands: [neomutt]
+    version_flags: [--version]
+  - name: terjira
+    commands: [terjira]
+    version_flags: [--version]
+  - name: ipt
+    commands: [ipt]
+    version_flags: [--version]
+  - name: uber-cli
+    commands: [uber]
+    version_flags: [--version]
+  - name: buku
+    commands: [buku]
+    version_flags: [--version]
+  - name: fjira
+    commands: [fjira]
+    version_flags: [--version]
+  - name: overtime
+    commands: [overtime]
+    version_flags: [--version]
+  - name: cookcli
+    commands: [cookcli, cook]
+    version_flags: [--version]
+  - name: hns
+    commands: [hns]
+    version_flags: [--version]
+
+# ============================================================================
+# 53. TIME TRACKING EXTRAS
+# ============================================================================
+time_tracking_extras:
+  - name: timetrap
+    commands: [timetrap, t]
+    version_flags: [--version]
+  - name: moro
+    commands: [moro]
+    version_flags: [--version]
+  - name: utt
+    commands: [utt]
+    version_flags: [--version]
+  - name: bartib
+    commands: [bartib]
+    version_flags: [--version]
+  - name: arttime
+    commands: [arttime]
+    version_flags: [--version]
+
+# ============================================================================
+# 54. NOTE TAKING EXTRAS
+# ============================================================================
+note_taking:
+  - name: idea
+    commands: [idea]
+    version_flags: [--version]
+  - name: geeknote
+    commands: [geeknote]
+    version_flags: [--version]
+  - name: terminal-velocity
+    commands: [terminal_velocity]
+    version_flags: [--version]
+  - name: eureka
+    commands: [eureka]
+    version_flags: [--version]
+  - name: sncli
+    commands: [sncli]
+    version_flags: [--version]
+  - name: td-cli
+    commands: [td]
+    version_flags: [--version]
+  - name: taskbook
+    commands: [taskbook, tb]
+    version_flags: [--version]
+  - name: dnote
+    commands: [dnote]
+    version_flags: [--version]
+  - name: nb
+    commands: [nb]
+    version_flags: [--version]
+  - name: obsidian-cli
+    commands: [obsidian]
+    version_flags: [--version]
+  - name: journalot
+    commands: [journalot]
+    version_flags: [--version]
+  - name: jrnl
+    commands: [jrnl]
+    version_flags: [--version]
+
+# ============================================================================
+# 55. FINANCE EXTRAS
+# ============================================================================
+finance_extras:
+  - name: moeda
+    commands: [moeda]
+    version_flags: [--version]
+  - name: cash-cli
+    commands: [cash]
+    version_flags: [--version]
+  - name: ticker
+    commands: [ticker]
+    version_flags: [--version]
+
+# ============================================================================
+# 56. PRESENTATION EXTRAS
+# ============================================================================
+presentation_extras:
+  - name: wopr
+    commands: [wopr]
+    version_flags: [--version]
+  - name: decktape
+    commands: [decktape]
+    version_flags: [--version]
+  - name: mdp
+    commands: [mdp]
+    version_flags: [--version]
+  - name: sent
+    commands: [sent]
+    version_flags: [--version]
+  - name: marp
+    commands: [marp]
+    version_flags: [--version]
+
+# ============================================================================
+# 57. CALENDAR EXTRAS
+# ============================================================================
+calendar_extras:
+  - name: khal
+    commands: [khal]
+    version_flags: [--version]
+  - name: vdirsyncer
+    commands: [vdirsyncer]
+    version_flags: [--version]
+  - name: birthday
+    commands: [birthday]
+    version_flags: [--version]
+
+# ============================================================================
+# 58. WEB UTILITIES
+# ============================================================================
+web_utilities:
+  - name: bitly-client
+    commands: [bitly]
+    version_flags: [--version]
+  - name: deadlink
+    commands: [deadlink]
+    version_flags: [--version]
+  - name: crawley
+    commands: [crawley]
+    version_flags: [--version]
+  - name: kill-tabs
+    commands: [kill-tabs]
+    version_flags: [--version]
+  - name: alex
+    commands: [alex]
+    version_flags: [--version]
+  - name: clevercli
+    commands: [clevercli]
+    version_flags: [--version]
+
+# ============================================================================
+# 59. MACOS SPECIFIC
+# ============================================================================
+macos_specific:
+  - name: open-pip-cli
+    commands: [open-pip]
+    version_flags: [--version]
+  - name: osx-wifi-cli
+    commands: [wifi]
+    version_flags: [--version]
+  - name: active-win-cli
+    commands: [active-win]
+    version_flags: [--version]
+  - name: stronghold
+    commands: [stronghold]
+    version_flags: [--version]
+  - name: dark-mode
+    commands: [dark-mode]
+    version_flags: [--version]
+  - name: clippy-macos
+    commands: [clippy]
+    version_flags: [--version]
+  - name: anvil
+    commands: [anvil]
+    version_flags: [--version]
+
+# ============================================================================
+# 60. TERMINAL SHARING
+# ============================================================================
+terminal_sharing:
+  - name: gotty
+    commands: [gotty]
+    version_flags: [--version]
+  - name: tmate
+    commands: [tmate]
+    version_flags: [--version]
+  - name: warp-cli
+    commands: [warp-cli]
+    version_flags: [--version]
+
+# ============================================================================
+# 61. SSH EXTRAS
+# ============================================================================
+ssh_extras:
+  - name: mosh
+    commands: [mosh]
+    version_flags: [--version]
+  - name: xxh
+    commands: [xxh]
+    version_flags: [--version]
+
+# ============================================================================
+# 62. NETWORK EXTRAS
+# ============================================================================
+network_extras:
+  - name: get-port-cli
+    commands: [get-port]
+    version_flags: [--version]
+  - name: is-reachable-cli
+    commands: [is-reachable]
+    version_flags: [--version]
+  - name: acmetool
+    commands: [acmetool]
+    version_flags: [--version]
+  - name: certificate-ripper
+    commands: [certificate-ripper]
+    version_flags: [--version]
+  - name: neoss
+    commands: [neoss]
+    version_flags: [--version]
+  - name: gg-proxy
+    commands: [gg]
+    version_flags: [--version]
+  - name: rustnet
+    commands: [rustnet]
+    version_flags: [--version]
+  - name: sshuttle
+    commands: [sshuttle]
+    version_flags: [--version]
+
+# ============================================================================
+# 63. BENCHMARKING & PERFORMANCE
+# ============================================================================
+benchmarking:
+  - name: hyperfine
+    commands: [hyperfine]
+    version_flags: [--version]
+  - name: wrk
+    commands: [wrk]
+    version_flags: [--version]
+  - name: ab
+    commands: [ab]
+    version_flags: [-V]
+  - name: siege
+    commands: [siege]
+    version_flags: [--version]
+  - name: hey
+    commands: [hey]
+    version_flags: [--version]
+
+# ============================================================================
+# 64. CODE QUALITY & ANALYSIS
+# ============================================================================
+code_quality:
+  - name: cloc
+    commands: [cloc]
+    version_flags: [--version]
+  - name: scc
+    commands: [scc]
+    version_flags: [--version]
+  - name: lizard
+    commands: [lizard]
+    version_flags: [--version]
+  - name: sonarqube-scanner
+    commands: [sonar-scanner]
+    version_flags: [--version]
+
+# ============================================================================
+# 65. DEPENDENCY MANAGEMENT
+# ============================================================================
+dependency_management:
+  - name: snyk
+    commands: [snyk]
+    version_flags: [--version]
+  - name: dependabot
+    commands: [dependabot]
+    version_flags: [--version]
+  - name: renovate
+    commands: [renovate]
+    version_flags: [--version]
+  - name: greenkeeper
+    commands: [greenkeeper]
     version_flags: [--version]
