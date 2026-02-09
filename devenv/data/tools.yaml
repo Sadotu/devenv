@@ -1,0 +1,249 @@
+# Development Tools Database
+# Comprehensive list of tools to scan for
+
+package_managers:
+  - name: npm
+    commands: [npm]
+    version_flags: [--version]
+  - name: pip
+    commands: [pip, pip3]
+    version_flags: [--version]
+  - name: yarn
+    commands: [yarn]
+    version_flags: [--version]
+  - name: pnpm
+    commands: [pnpm]
+    version_flags: [--version]
+  - name: cargo
+    commands: [cargo]
+    version_flags: [--version]
+  - name: gem
+    commands: [gem]
+    version_flags: [--version]
+  - name: composer
+    commands: [composer]
+    version_flags: [--version]
+  - name: brew
+    commands: [brew]
+    version_flags: [--version]
+  - name: apt
+    commands: [apt]
+    version_flags: [--version]
+  - name: yum
+    commands: [yum]
+    version_flags: [--version]
+  - name: choco
+    commands: [choco]
+    version_flags: [--version]
+  - name: winget
+    commands: [winget]
+    version_flags: [--version]
+  - name: scoop
+    commands: [scoop]
+    version_flags: [--version]
+  - name: poetry
+    commands: [poetry]
+    version_flags: [--version]
+  - name: conda
+    commands: [conda]
+    version_flags: [--version]
+
+languages:
+  - name: Python
+    commands: [python, python3]
+    version_flags: [--version]
+  - name: Node.js
+    commands: [node, nodejs]
+    version_flags: [--version]
+  - name: Java
+    commands: [java]
+    version_flags: [--version]
+  - name: .NET
+    commands: [dotnet]
+    version_flags: [--version]
+  - name: Go
+    commands: [go]
+    version_flags: [version]
+  - name: Ruby
+    commands: [ruby]
+    version_flags: [--version]
+  - name: PHP
+    commands: [php]
+    version_flags: [--version]
+  - name: Rust
+    commands: [rustc]
+    version_flags: [--version]
+  - name: Perl
+    commands: [perl]
+    version_flags: [--version]
+  - name: Lua
+    commands: [lua]
+    version_flags: [-v]
+  - name: R
+    commands: [R, Rscript]
+    version_flags: [--version]
+  - name: Swift
+    commands: [swift]
+    version_flags: [--version]
+  - name: Kotlin
+    commands: [kotlin]
+    version_flags: [-version]
+  - name: Scala
+    commands: [scala]
+    version_flags: [-version]
+  - name: Deno
+    commands: [deno]
+    version_flags: [--version]
+  - name: Bun
+    commands: [bun]
+    version_flags: [--version]
+
+version_control:
+  - name: Git
+    commands: [git]
+    version_flags: [--version]
+  - name: SVN
+    commands: [svn]
+    version_flags: [--version]
+  - name: Mercurial
+    commands: [hg]
+    version_flags: [--version]
+
+containers:
+  - name: Docker
+    commands: [docker]
+    version_flags: [--version]
+  - name: Docker Compose
+    commands: [docker-compose]
+    version_flags: [--version]
+  - name: Podman
+    commands: [podman]
+    version_flags: [--version]
+  - name: Kubectl
+    commands: [kubectl]
+    version_flags: [version]
+  - name: Helm
+    commands: [helm]
+    version_flags: [version]
+  - name: Minikube
+    commands: [minikube]
+    version_flags: [version]
+
+cloud_tools:
+  - name: AWS CLI
+    commands: [aws]
+    version_flags: [--version]
+  - name: Azure CLI
+    commands: [az]
+    version_flags: [--version]
+  - name: Google Cloud SDK
+    commands: [gcloud]
+    version_flags: [--version]
+  - name: Heroku CLI
+    commands: [heroku]
+    version_flags: [--version]
+  - name: GitHub CLI
+    commands: [gh]
+    version_flags: [--version]
+
+build_tools:
+  - name: Make
+    commands: [make]
+    version_flags: [--version]
+  - name: CMake
+    commands: [cmake]
+    version_flags: [--version]
+  - name: Gradle
+    commands: [gradle]
+    version_flags: [--version]
+  - name: Maven
+    commands: [mvn]
+    version_flags: [--version]
+  - name: Webpack
+    commands: [webpack]
+    version_flags: [--version]
+  - name: Vite
+    commands: [vite]
+    version_flags: [--version]
+
+editors:
+  - name: Vim
+    commands: [vim]
+    version_flags: [--version]
+  - name: Neovim
+    commands: [nvim]
+    version_flags: [--version]
+  - name: Emacs
+    commands: [emacs]
+    version_flags: [--version]
+  - name: Nano
+    commands: [nano]
+    version_flags: [--version]
+  - name: VSCode
+    commands: [code]
+    version_flags: [--version]
+
+shells:
+  - name: Bash
+    commands: [bash]
+    version_flags: [--version]
+  - name: Zsh
+    commands: [zsh]
+    version_flags: [--version]
+  - name: Fish
+    commands: [fish]
+    version_flags: [--version]
+  - name: PowerShell
+    commands: [pwsh, powershell]
+    version_flags: [--version]
+
+databases:
+  - name: MySQL
+    commands: [mysql]
+    version_flags: [--version]
+  - name: PostgreSQL
+    commands: [psql]
+    version_flags: [--version]
+  - name: SQLite
+    commands: [sqlite3]
+    version_flags: [--version]
+  - name: MongoDB
+    commands: [mongo, mongosh]
+    version_flags: [--version]
+  - name: Redis
+    commands: [redis-cli]
+    version_flags: [--version]
+
+infrastructure:
+  - name: Terraform
+    commands: [terraform]
+    version_flags: [--version]
+  - name: Ansible
+    commands: [ansible]
+    version_flags: [--version]
+  - name: Vagrant
+    commands: [vagrant]
+    version_flags: [--version]
+
+utilities:
+  - name: curl
+    commands: [curl]
+    version_flags: [--version]
+  - name: wget
+    commands: [wget]
+    version_flags: [--version]
+  - name: jq
+    commands: [jq]
+    version_flags: [--version]
+  - name: tmux
+    commands: [tmux]
+    version_flags: [-V]
+  - name: screen
+    commands: [screen]
+    version_flags: [--version]
+  - name: htop
+    commands: [htop]
+    version_flags: [--version]
+  - name: tree
+    commands: [tree]
+    version_flags: [--version]
