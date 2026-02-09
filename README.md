@@ -29,7 +29,7 @@ pip install -e .
 ### From Source
 
 ```bash
-git clone https://github.com/yourusername/devenv.git
+git clone https://github.com/sadotu/devenv.git
 cd devenv
 pip install -e .
 ```
@@ -200,9 +200,9 @@ Inspired by the comprehensive TODO document for creating a development environme
 
 ## 📮 Support
 
-- GitHub Issues: [Report bugs or request features](https://github.com/yourusername/devenv/issues)
-- Email: your.email@example.com
+- GitHub Issues: [Report bugs or request features](https://github.com/sadotu/devenv/issues)
 
 ---
 
 Made with 💚 for developers who want clarity in their development environment
+
