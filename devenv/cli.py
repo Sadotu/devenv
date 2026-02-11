@@ -98,13 +98,13 @@ Examples:
         # Select environments to scan
         selected_envs = select_environments(environments, args)
 
-        # Initialize scanner
-        scanner = ToolScanner()
-
         # Parse categories
         categories = None
         if args.category:
             categories = [c.strip() for c in args.category.split(',')]
+
+        # Import executor factory
+        from .scanner.platforms import create_executor
 
         # Scan selected environments
         results_by_env = {}
@@ -112,11 +112,31 @@ Examples:
             if args.verbose:
                 print(f"\nScanning environment: {env['name']}...")
 
-            results = scanner.scan_all_tools(categories=categories)
-            results_by_env[env['name']] = results
+            # Create environment-specific executor
+            executor = create_executor(env)
 
-        # Format and output results
-        output_results(results_by_env, selected_envs, args, scanner)
+            # Check if environment is available
+            if not executor.is_available():
+                print(f"Warning: Environment '{env['name']}' is not available. Skipping...")
+                continue
+
+            # Create scanner with environment-specific executor
+            scanner = ToolScanner(executor=executor)
+
+            try:
+                results = scanner.scan_all_tools(categories=categories)
+                results_by_env[env['name']] = results
+            except Exception as e:
+                print(f"Error scanning {env['name']}: {e}")
+                if args.verbose:
+                    import traceback
+                    traceback.print_exc()
+                continue
+
+        # Format and output results (use a default scanner for stats)
+        # Create a scanner for the current environment just for stats calculation
+        default_scanner = ToolScanner()
+        output_results(results_by_env, selected_envs, args, default_scanner)
 
         return 0
 

@@ -52,6 +52,45 @@ def detect_environments() -> List[Dict]:
                 'shell': 'bash'
             })
 
+    # WSL-specific: Check for Windows host and other WSL distros
+    elif is_wsl():
+        # Add Windows host
+        windows_powershell = '/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'
+        if os.path.exists(windows_powershell):
+            environments.append({
+                'name': 'Windows',
+                'type': 'windows',
+                'path': 'C:\\',
+                'is_current': False,
+                'shell': 'powershell'
+            })
+
+        # Check for other WSL distros
+        wsl_distros = detect_wsl_distros_from_wsl()
+        environments.extend(wsl_distros)
+
+        # Check for Git Bash
+        git_bash_path = '/mnt/c/Program Files/Git'
+        if os.path.exists(git_bash_path):
+            environments.append({
+                'name': 'Git Bash',
+                'type': 'gitbash',
+                'path': 'C:\\Program Files\\Git',
+                'is_current': False,
+                'shell': 'bash'
+            })
+
+        # Check for MSYS2
+        msys2_path = '/mnt/c/msys64'
+        if os.path.exists(msys2_path):
+            environments.append({
+                'name': 'MSYS2',
+                'type': 'msys2',
+                'path': 'C:\\msys64',
+                'is_current': False,
+                'shell': 'bash'
+            })
+
     return environments
 
 
@@ -82,6 +121,62 @@ def detect_wsl_distros() -> List[Dict]:
                 version = parts[2] if len(parts) > 2 else '1'
 
                 if state in ['Running', 'Stopped']:
+                    distros.append({
+                        'name': f'WSL: {name}',
+                        'type': 'wsl',
+                        'distro': name,
+                        'wsl_version': version,
+                        'state': state,
+                        'path': f'\\\\wsl$\\{name}',
+                        'is_current': False,
+                        'shell': 'bash'
+                    })
+
+        return distros
+    except (subprocess.TimeoutExpired, FileNotFoundError, UnicodeDecodeError):
+        return []
+
+
+def detect_wsl_distros_from_wsl() -> List[Dict]:
+    """Detect other WSL distributions when running from WSL"""
+    try:
+        # Find wsl.exe
+        wsl_exe = '/mnt/c/Windows/System32/wsl.exe'
+        if not os.path.exists(wsl_exe):
+            return []
+
+        result = subprocess.run(
+            [wsl_exe, '--list', '--verbose'],
+            capture_output=True,
+            timeout=5
+        )
+
+        # Decode UTF-16 LE output
+        try:
+            output = result.stdout.decode('utf-16-le')
+        except:
+            output = result.stdout.decode('utf-8', errors='ignore')
+
+        distros = []
+        lines = output.split('\n')
+
+        # Get current distro name
+        current_distro = os.environ.get('WSL_DISTRO_NAME', '')
+
+        for line in lines[1:]:  # Skip header
+            line = line.strip()
+            if not line:
+                continue
+
+            # Remove asterisk and split
+            parts = line.replace('*', '').split()
+            if len(parts) >= 2:
+                name = parts[0]
+                state = parts[1] if len(parts) > 1 else 'Unknown'
+                version = parts[2] if len(parts) > 2 else '1'
+
+                # Skip current distro and non-running/stopped distros
+                if name != current_distro and state in ['Running', 'Stopped']:
                     distros.append({
                         'name': f'WSL: {name}',
                         'type': 'wsl',

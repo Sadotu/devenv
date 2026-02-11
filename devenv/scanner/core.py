@@ -11,18 +11,25 @@ import yaml
 class ToolScanner:
     """Main tool scanner class"""
 
-    def __init__(self, tools_db_path: Optional[str] = None):
+    def __init__(self, tools_db_path: Optional[str] = None, executor=None):
         """
         Initialize the tool scanner.
 
         Args:
             tools_db_path: Path to tools.yaml database file
+            executor: ExecutorInterface implementation for running commands
         """
         if tools_db_path is None:
             # Use default path relative to this file
             self.tools_db_path = Path(__file__).parent.parent / 'data' / 'tools.yaml'
         else:
             self.tools_db_path = Path(tools_db_path)
+
+        # Initialize executor (default to current environment)
+        if executor is None:
+            from .platforms.current import CurrentEnvironmentExecutor
+            executor = CurrentEnvironmentExecutor()
+        self.executor = executor
 
         self.tools_db = self._load_tools_database()
 
@@ -77,7 +84,7 @@ class ToolScanner:
 
         # Try to find the tool
         for command in commands:
-            path = shutil.which(command)
+            path = self.executor.which(command)
             if path:
                 # Tool found, try to get version
                 version = self.get_tool_version(command, version_flags)
@@ -111,19 +118,16 @@ class ToolScanner:
         """
         for flag in version_flags:
             try:
-                result = subprocess.run(
-                    [command, flag],
-                    capture_output=True,
-                    text=True,
-                    timeout=3
-                )
+                result = self.executor.run_command([command, flag], timeout=3)
+
+                # Check for executor-level errors
+                if result.error:
+                    continue
 
                 if result.returncode == 0:
                     version = self._parse_version_output(result.stdout + result.stderr)
                     if version:
                         return version
-            except (subprocess.TimeoutExpired, FileNotFoundError, PermissionError):
-                continue
             except Exception:
                 continue
 
